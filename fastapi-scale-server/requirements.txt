@@ -1,0 +1,22 @@
+fastapi-scale-server
+├── src
+│   ├── main.py
+│   ├── api
+│   │   └── endpoints.py
+│   ├── models
+│   │   └── scale_enum.py
+│   ├── utils
+│   │   └── scale_codec.py
+│   └── types
+│       └── custom_enum.py
+├── requirements.txt
+├── README.md
+└── tests
+    └── test_scale_codec.py
+
+fastapi
+uvicorn
+pydantic
+scalecodec
+aiohttp
+pytest
