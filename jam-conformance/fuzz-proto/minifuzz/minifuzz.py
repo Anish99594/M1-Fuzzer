@@ -157,6 +157,7 @@ def main():
                 # Send fuzzer data length (4 bytes, little endian)
                 request_len = len(request_bytes)
                 request_len_bytes = struct.pack('<I', request_len)
+                print(f"[MINIFUZZ] Sending {request_len} bytes, first byte: {request_bytes[0] if request_bytes else 'None'}", flush=True)
                 sock.sendall(request_len_bytes)
                 # Send fuzzer file data
                 sock.sendall(request_bytes)
